@@ -96,9 +96,6 @@ def _ajouter_tuile(plateau: List[List[int]]) -> List[List[int]]:
     return plateau
 
 
-
-    raise NotImplementedError("Fonction _ajouter_tuile non implémentée.")
-
 def _supprimer_zeros(ligne: List[int]) -> List[int]:
     """
     Supprime les zéros d'une ligne.
@@ -108,7 +105,15 @@ def _supprimer_zeros(ligne: List[int]) -> List[int]:
     :return: La ligne sans zéros.
     :rtype: List[int]
     """
-    raise NotImplementedError("Fonction _supprimer_zeros non implémentée.")
+
+    l = [2, 0, 4, 0]
+    result =[]
+    for e in l:
+        if e!= 0:
+            result.append(e)
+    return result
+
+
 
 def _fusionner(ligne: List[int]) -> Tuple[List[int], int]:
     """

@@ -2,6 +2,7 @@
 
 import random
 from typing import List, Tuple
+import copy
 
 TAILLE:int = 4
 
@@ -18,6 +19,8 @@ def nouvelle_partie() -> Tuple[List[List[int]], int]:
     :rtype: Tuple[List[List[int]], int]
     """
     raise NotImplementedError("Fonction nouvelle_partie non implémentée.")
+
+
 
 def jouer_coup(plateau: List[List[int]], direction: str) -> tuple[List[List[int]], int, bool]:
     """
@@ -80,6 +83,18 @@ def _ajouter_tuile(plateau: List[List[int]]) -> List[List[int]]:
     :return: Une nouvelle grille avec une tuile ajoutée.
     :rtype: List[List[int]]
     """
+    
+    plateau = copy.deepcopy(plateau)
+    cv = _get_cases_vides(plateau)
+    n = random.randint(0,len(cv)-1)
+    coord = cv[n]
+    ligne = coord[0]
+    col = coord[1]
+    plateau[ligne][col] = 2
+    return plateau
+
+
+
     raise NotImplementedError("Fonction _ajouter_tuile non implémentée.")
 
 def _supprimer_zeros(ligne: List[int]) -> List[int]:

@@ -42,7 +42,6 @@ def test__get_cases_vides():
     assert resultat == attendu, f"Normalement : {attendu} mais {resultat}"
     print("OK")
 
-
 def test__ajouter_tuile():
     print("----> Tests de _ajouter_tuile...")
     plateau = _creer_plateau_vide()
@@ -88,8 +87,6 @@ def test__supprimer_zeros():
     resultat = _supprimer_zeros(l1)
     assert resultat == attendu, f"Résulat attendu : {attendu} resultat obtenu {resultat}."
     print("OK")
-
-
 
 def test__fusionner():
     print("----> Tests de _fusionner...")

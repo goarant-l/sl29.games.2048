@@ -106,13 +106,7 @@ def _supprimer_zeros(ligne: List[int]) -> List[int]:
     :rtype: List[int]
     """
 
-    l = [2, 0, 4, 0]
-    result =[]
-    for e in l:
-        if e!= 0:
-            result.append(e)
-    return result
-
+    return [e for e in ligne if e!=0]
 
 
 def _fusionner(ligne: List[int]) -> Tuple[List[int], int]:

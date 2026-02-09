@@ -141,7 +141,17 @@ def _deplacer_gauche(plateau) : # ajouter les annotations de type
     """
     DOCSTRING À ÉCRIRE
     """
-    raise NotImplementedError("Fonction _deplacer_gauche non implémentée.")
+
+    nouveau_plateau = []
+    nouveaux_points = 0
+    
+    for ligne in plateau:
+        ligne_sans_zeros = _supprimer_zeros(ligne)
+        ligne_fusionnee, points = _fusionner(ligne_sans_zeros)
+        nouveaux_points = nouveaux_points + points
+        ligne_finale = _completer_zeros(ligne_fusionnee)
+        nouveau_plateau.append(ligne_finale)
+    return nouveau_plateau, nouveaux_points
 
 def _inverser_lignes(plateau): # ajouter les annotations de type
     """

@@ -157,7 +157,21 @@ def test__deplacer_gauche():
 
 def test__inverser_lignes():
     print("----> Tests de _inverser_lignes...")
-    raise NotImplementedError("Tests de _inverser_lignes non implémentés.")
+    
+    plateau = [ 
+    [4, 0, 0, 0],
+    [4, 4, 0, 0],
+    [0, 0, 0, 0],
+    [0, 4, 4, 0]
+    ]
+    attendu_p = [ 
+    [0, 0, 0, 4],
+    [0, 0, 4, 4],
+    [0, 0, 0, 0],
+    [0, 4, 4, 0]
+    ]
+    resultat = _inverser_lignes(plateau)
+    assert resultat == attendu_p, f"J'attendais à {attendu_p} mais j'ai {resultat}"
     print("OK")
 
 def test__deplacer_droite():

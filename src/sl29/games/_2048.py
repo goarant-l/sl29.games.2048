@@ -157,7 +157,7 @@ def _inverser_lignes(plateau): # ajouter les annotations de type
     """
     DOCSTRING À ÉCRIRE
     """
-    raise NotImplementedError("Fonction _inverser_lignes non implémentée.")
+    return [ligne[::-1] for ligne in plateau]
 
 def _deplacer_droite(plateau: List[List[int]]) -> Tuple[List[List[int]], int]:
     """
